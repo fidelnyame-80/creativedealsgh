@@ -3,13 +3,13 @@ import Image from "next/image";
 
 type BlogCardProps = {
   title: string;
-  content: string;
-  excerpt: string
+  content?: string;
+  excerpt: string;
   image: string;
   slug: string;
 };
 
-export default function BlogCard({ title, content, image, slug }: BlogCardProps) {
+export default function BlogCard({ title, excerpt, image, slug }: BlogCardProps) {
   return (
     <Link
       href={`/blog/${slug}`}
@@ -31,7 +31,7 @@ export default function BlogCard({ title, content, image, slug }: BlogCardProps)
         <h3 className="text-lg font-semibold text-gray-900 mb-2 group-hover:text-orange-500 transition-colors">
           {title}
         </h3>
-        <p className="text-gray-600 text-sm mb-4">{content}</p>
+        <p className="text-gray-600 text-sm mb-4">{excerpt}</p>
 
         <span className="inline-block text-orange-500 font-medium text-sm">
           Read More →

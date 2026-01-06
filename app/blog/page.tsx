@@ -31,12 +31,13 @@ export default function BlogListing() {
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
         {posts.map((post) => (
           <BlogCard
-            key={post.slug}
-            title={post.title}
-            content={post.content}
-            image={post.image}
-            slug={post.slug}
-          />
+  key={post.slug}
+  title={post.title}
+  excerpt={post.content.slice(0, 120) + "..."}
+  image={post.image}
+  slug={post.slug}
+/>
+
         ))}
       </div>
     </div>
