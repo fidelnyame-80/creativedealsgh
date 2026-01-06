@@ -4,6 +4,7 @@ import Image from "next/image";
 type BlogCardProps = {
   title: string;
   content: string;
+  excerpt: string
   image: string;
   slug: string;
 };
